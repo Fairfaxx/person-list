@@ -10,7 +10,7 @@ const Person = ({ img, name, job }) => {
 
   useEffect(() => {
     const getPeople = async () => {
-      const data = await axios.get('https://randomuser.me/api/');
+      const data = await axios.get('https://randomuser.me/api/?results=50');
       console.log(data.data.results)
       setPeople(data.data.results)
     }
@@ -55,6 +55,7 @@ const PersonList = () => {
       <Person img='19' name='Richard' job='Developer' />
       <Person img='19' name='pedro' job='Developer' />
       <Person img='19' name='Pablo' job='Developer' />
+      <Person img='19' name='John' job='Developer' />
     </section>
   )
 }
